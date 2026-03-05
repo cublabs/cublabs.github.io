@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - cromu</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #faf8f5;
+      color: #3a3a3a;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #e8e2dc;
+    }
+    .header h1 {
+      font-size: 1.8rem;
+      color: #c47a5a;
+      margin-bottom: 0.3rem;
+    }
+    .header p {
+      font-size: 0.9rem;
+      color: #999;
+    }
+    .lang-tabs {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .lang-tab {
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: #f0ebe6;
+      color: #888;
+    }
+    .lang-tab.active {
+      background: #c47a5a;
+      color: #fff;
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    h2 {
+      font-size: 1.2rem;
+      color: #c47a5a;
+      margin: 2rem 0 0.8rem;
+    }
+    p { margin-bottom: 0.8rem; font-size: 0.95rem; color: #555; }
+    ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    li { margin-bottom: 0.3rem; }
+    a { color: #c47a5a; }
+    .back {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #c47a5a;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back:hover { text-decoration: underline; }
+    strong { color: #3a3a3a; }
+    .contact-box {
+      background: #f0ebe6;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .contact-box a {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+    .faq-item strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+    .faq-item p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back">&larr; the cub labs</a>
+
+    <div class="header">
+      <h1>Support</h1>
+      <p>cromu - Crafting Companion</p>
+    </div>
+
+    <div class="lang-tabs">
+      <button class="lang-tab active" onclick="switchLang('en')">English</button>
+      <button class="lang-tab" onclick="switchLang('ko')">한국어</button>
+    </div>
+
+    <!-- English -->
+    <div id="lang-en" class="lang-section active">
+      <h2>Contact Us</h2>
+      <p>Have a question, found a bug, or want to suggest a feature? We'd love to hear from you.</p>
+      <div class="contact-box">
+        <p style="margin-bottom: 0.5rem; color: #888;">Email us at</p>
+        <a href="mailto:thecublabs@gmail.com">thecublabs@gmail.com</a>
+      </div>
+      <p>We typically respond within 48 hours.</p>
+
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <strong>Q: Where is my data stored?</strong>
+        <p>All your data is stored locally on your device. We do not have any servers, so your projects, patterns, and stash data never leave your phone.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Q: Can I transfer my data to a new device?</strong>
+        <p>Cloud backup is not yet available. We're working on this feature for a future update.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Q: How do I remove ads?</strong>
+        <p>An ad-free option is planned for a future update. Thank you for your patience.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Q: What languages are supported?</strong>
+        <p>cromu is available in 10 languages: English, Korean, Japanese, Chinese, Spanish, Portuguese, German, French, Turkish, and Russian.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Q: The app crashed. What should I do?</strong>
+        <p>Please try restarting the app. If the issue persists, email us with details about what you were doing when the crash occurred, and we'll investigate.</p>
+      </div>
+
+      <h2>Links</h2>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <!-- Korean -->
+    <div id="lang-ko" class="lang-section">
+      <h2>문의하기</h2>
+      <p>질문이 있거나 버그를 발견하셨거나, 기능을 제안하고 싶으시다면 언제든 연락해주세요.</p>
+      <div class="contact-box">
+        <p style="margin-bottom: 0.5rem; color: #888;">이메일 문의</p>
+        <a href="mailto:thecublabs@gmail.com">thecublabs@gmail.com</a>
+      </div>
+      <p>보통 48시간 이내에 답변드립니다.</p>
+
+      <h2>자주 묻는 질문</h2>
+
+      <div class="faq-item">
+        <strong>Q: 데이터는 어디에 저장되나요?</strong>
+        <p>모든 데이터는 사용자의 기기에만 저장됩니다. 별도의 서버를 운영하지 않으므로, 프로젝트, 도안, 보관함 데이터가 기기 밖으로 전송되지 않습니다.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Q: 새 기기로 데이터를 옮길 수 있나요?</strong>
+        <p>클라우드 백업 기능은 아직 제공되지 않습니다. 향후 업데이트에서 지원할 예정입니다.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Q: 광고를 제거할 수 있나요?</strong>
+        <p>광고 없는 옵션은 향후 업데이트에서 제공할 예정입니다. 양해 부탁드립니다.</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Q: 어떤 언어를 지원하나요?</strong>
+        <p>cromu는 10개 언어를 지원합니다: 한국어, 영어, 일본어, 중국어, 스페인어, 포르투갈어, 독일어, 프랑스어, 터키어, 러시아어</p>
+      </div>
+
+      <div class="faq-item">
+        <strong>Q: 앱이 갑자기 종료되었어요.</strong>
+        <p>앱을 다시 시작해주세요. 문제가 계속되면 어떤 작업 중에 종료되었는지 이메일로 알려주시면 조사하겠습니다.</p>
+      </div>
+
+      <h2>관련 링크</h2>
+      <ul>
+        <li><a href="privacy-policy.html">개인정보처리방침</a></li>
+        <li><a href="terms-of-service.html">이용약관</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.lang-tab').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.getElementById('lang-' + lang).classList.add('active');
+      document.querySelector('[onclick="switchLang(\'' + lang + '\')"]').classList.add('active');
+    }
+  </script>
+</body>
+</html>
