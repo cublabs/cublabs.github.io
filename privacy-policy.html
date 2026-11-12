@@ -91,7 +91,7 @@
     <div class="header">
       <h1>Privacy Policy</h1>
       <p>cromu - Crochet Stitch Counter</p>
-      <p>Effective Date: October 3, 2026</p>
+      <p>Effective Date: PUBLISH_DATE_EN</p>
     </div>
 
     <div class="lang-tabs">
@@ -102,14 +102,19 @@
     <!-- English -->
     <div id="lang-en" class="lang-section active">
       <h2>Overview</h2>
-      <p>cromu is a crochet project management app. Your data is stored locally on your device. If you choose to turn on cloud backup, a copy is saved to your own iCloud or Google Drive account. We do not operate any servers, and we never receive, view, or store your data or personal information.</p>
-
-      <h2>Information We Do NOT Collect</h2>
+      <p>cromu is a crochet project management app. Your data is stored on your device. Two optional features send a copy elsewhere, and only if you turn them on:</p>
       <ul>
-        <li>We do not collect personal information (name, email, phone number, etc.)</li>
-        <li>We do not require account creation. Signing in with Google is optional and is used only for cloud backup on Android</li>
-        <li>We do not track your location</li>
-        <li>We do not share your data with any third parties (other than the services described below)</li>
+        <li><strong>Cloud backup</strong> saves a copy to your own iCloud or Google Drive account. We cannot access it.</li>
+        <li><strong>Sync across devices</strong> (Premium) stores a copy on our server so your signed-in devices show the same data. This requires signing in with Google or Apple.</li>
+      </ul>
+      <p>If you use neither, your data does not leave your device except as described under Third-Party Services.</p>
+
+      <h2>What We Do Not Collect</h2>
+      <ul>
+        <li>You do not need an account to use cromu. An account is created only when you sign in to use sync across devices; we then store your email address as described below</li>
+        <li>Signing in with Google for cloud backup on Android does not send your email address to us</li>
+        <li>We do not collect your name, phone number, or precise location</li>
+        <li>We do not sell your data. We share data only with the service providers described in this policy</li>
       </ul>
 
       <h2>Data Stored on Your Device</h2>
@@ -120,7 +125,7 @@
         <li>App preferences (language, display settings, nickname)</li>
         <li>Profile photo (if you choose to set one)</li>
       </ul>
-      <p>This data stays on your device unless you turn on cloud backup (see below). If you uninstall the app, the data on your device is permanently deleted. A cloud backup you created remains in your iCloud or Google Drive account until you delete it.</p>
+      <p>This data stays on your device unless you turn on cloud backup or sync across devices (see below). If you uninstall the app, the data on your device is permanently deleted. A cloud backup you created remains in your iCloud or Google Drive account until you delete it, and data on our server remains until you delete your account.</p>
 
       <h2>Cloud Backup (Optional)</h2>
       <p>cromu can back up your data to your own cloud storage. It runs only when you use it: manual backup is free, and Premium members can back up automatically once a day.</p>
@@ -128,19 +133,38 @@
         <li><strong>What is backed up:</strong> your project database, photos, pattern files, and app settings.</li>
         <li><strong>iOS:</strong> saved to cromu's own folder in your iCloud Drive under your Apple Account. Apple's handling of this data is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
         <li><strong>Android:</strong> you sign in with your Google account, and the backup is saved to a hidden app data folder in your Google Drive (the <code>drive.appdata</code> permission). cromu cannot see any other files in your Drive. Your Google account email is shown only in the app's settings screen and is never sent to us. Google's handling of this data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
-        <li><strong>We cannot access your backup.</strong> It goes directly from your device to your cloud account and never passes through our servers.</li>
+        <li><strong>We cannot access your backup.</strong> It goes directly from your device to your cloud account and never passes through our server.</li>
       </ul>
       <p>To delete a backup or stop backing up:</p>
       <ul>
-        <li>Turn off or disconnect cloud backup in <strong>Settings &gt; Cloud Backup</strong> in the app.</li>
+        <li>Turn off or disconnect cloud backup in <strong>Settings &gt; Backup &amp; Restore</strong> in the app.</li>
         <li><strong>Android:</strong> open Google Drive &gt; Settings &gt; Manage apps, then choose "Delete hidden app data" for cromu.</li>
         <li><strong>iOS:</strong> open Settings &gt; [your name] &gt; iCloud &gt; Manage Account Storage, then delete cromu's data.</li>
+      </ul>
+
+      <h2>Sync Across Devices (Optional, Premium)</h2>
+      <p>Sync is off unless you sign in and turn it on in <strong>Settings &gt; Sync across devices</strong>. It is used only to keep your devices in sync.</p>
+      <ul>
+        <li><strong>Sign-in:</strong> you sign in with Google or Apple. We receive your email address and an account identifier from Google or Apple, never your password. If you use Apple's "Hide My Email", we receive only the relay address.</li>
+        <li><strong>What we store:</strong> your email address and cromu account ID; your project data (projects, counters, timer sessions, patterns and their progress, yarns, stash yarns, needles, stash folders, yarn purchase records, stitch symbols, and charts); the files attached to them (project photos, pattern images and PDFs, profile photo); your nickname, profile picture, and theme settings; a random ID for each signed-in device; and a push notification token for each device.</li>
+        <li><strong>Why:</strong> to copy your changes between your devices and to wake your other devices when something changes. We do not use this data for advertising, analytics, or profiling, and we do not sell it.</li>
+        <li><strong>Where:</strong> on Cloudflare (Workers, D1 database, and R2 storage), which may process data in a country other than yours. Sync notifications are delivered through Google Firebase Cloud Messaging (and Apple Push Notification service on iOS) using the push token; they carry no content.</li>
+        <li><strong>Your subscription:</strong> while you are signed in, your Premium subscription is linked to your cromu account ID in RevenueCat so it works on all your devices. We do not send your email address to RevenueCat.</li>
+        <li><strong>How long:</strong> while your account exists. When you change an item, the previous version is kept for 30 days as a safety copy. When you delete an item, a deletion record is kept for 180 days so your other devices delete it too. Both are then removed automatically. A device's sign-in expires after 180 days without use.</li>
+      </ul>
+
+      <h2>Deleting Your Account and Data</h2>
+      <ul>
+        <li><strong>In the app:</strong> Settings &gt; Sync across devices &gt; Delete account. This immediately deletes your account and all of your data on our server, including files, revokes Sign in with Apple, and deletes your subscription record in RevenueCat. Data on your device is kept.</li>
+        <li><strong>If you no longer have the app:</strong> see <a href="delete-account.html">Delete your cromu account</a>.</li>
+        <li><strong>Signing out</strong> stops sync on that device but keeps your account and server data.</li>
+        <li>Deleting your account does not cancel your subscription. Cancel it in your App Store or Google Play account settings.</li>
       </ul>
 
       <h2>In-App Subscriptions</h2>
       <p>cromu offers an optional Premium subscription. Payments are processed by Apple (App Store) or Google (Google Play); we never receive your payment card details. To check whether your subscription is active, cromu uses <strong>RevenueCat</strong>, which processes:</p>
       <ul>
-        <li>An anonymous app user ID generated by RevenueCat (not linked to your name or email)</li>
+        <li>An app user ID: an anonymous ID generated by RevenueCat, or your cromu account ID if you sign in for sync across devices (never your name or email)</li>
         <li>Purchase records (product, purchase and expiration dates, store transaction identifiers)</li>
         <li>General device information (OS version, app version, country/region, IP address)</li>
       </ul>
@@ -150,7 +174,9 @@
       <p>cromu may request the following permissions:</p>
       <ul>
         <li><strong>Photo Library / Storage:</strong> To select images for projects and patterns, and to save generated pixel art designs to your device gallery.</li>
+        <li><strong>Camera:</strong> To take photos for your projects.</li>
         <li><strong>Files:</strong> To import PDF or text pattern files from your device.</li>
+        <li><strong>Notifications:</strong> To show the running timer and reminders, and to receive silent sync notifications if you use sync across devices.</li>
       </ul>
       <p>These permissions are requested only when you use the related features and can be revoked at any time through your device settings.</p>
 
@@ -163,6 +189,7 @@
         <li>App usage data related to ad interactions</li>
       </ul>
       <p>Google's data collection is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+      <p>On iOS, cromu asks for your permission (App Tracking Transparency) before the advertising identifier can be used for personalized ads.</p>
       <p>You can opt out of personalized advertising through your device settings:</p>
       <ul>
         <li><strong>Android:</strong> Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization</li>
@@ -205,7 +232,9 @@
       <p>cromu is not specifically directed at children under 13. We do not knowingly collect information from children. The ads displayed are standard Google AdMob ads and are subject to Google's policies.</p>
 
       <h2>Data Security</h2>
-      <p>Data stored on your device is protected by your device's security measures (screen lock, encryption, etc.). Cloud backups are protected by your Apple or Google account security. We do not transmit any data over the internet other than the cloud backup you choose to use and the data handled by Google AdMob, Firebase Analytics, Firebase Crashlytics, and RevenueCat as described above.</p>
+      <p>Data stored on your device is protected by your device's security measures (screen lock, encryption, etc.). Cloud backups are protected by your Apple or Google account security.</p>
+      <p>For sync across devices, data is sent only over encrypted connections (HTTPS) and can be accessed only with your account's sign-in. Files are transferred through links that expire after 15 minutes. Data on our server is encrypted at rest by Cloudflare, and Sign in with Apple tokens are additionally encrypted; your synced content itself is not end-to-end encrypted.</p>
+      <p>Other than cloud backup, sync across devices, and the third-party services described above, cromu does not transmit your data over the internet.</p>
 
       <h2>Changes to This Policy</h2>
       <p>We may update this Privacy Policy from time to time. Changes will be reflected with an updated effective date. Continued use of the app after changes constitutes acceptance.</p>
@@ -218,14 +247,19 @@
     <!-- Korean -->
     <div id="lang-ko" class="lang-section">
       <h2>개요</h2>
-      <p>cromu는 코바늘 뜨개질 프로젝트 관리 앱입니다. 데이터는 사용자의 기기에 저장됩니다. 사용자가 클라우드 백업을 켜면 사용자 본인의 iCloud 또는 Google Drive 계정에 사본이 저장됩니다. 당사는 어떠한 서버도 운영하지 않으며, 사용자의 데이터나 개인정보를 받거나 열람하거나 저장하지 않습니다.</p>
+      <p>cromu는 코바늘 뜨개질 프로젝트 관리 앱입니다. 데이터는 사용자의 기기에 저장됩니다. 다음 두 선택 기능은 사용자가 켰을 때만 사본을 다른 곳에 보냅니다.</p>
+      <ul>
+        <li><strong>클라우드 백업</strong>은 사용자 본인의 iCloud 또는 Google Drive 계정에 사본을 저장합니다. 당사는 이 백업에 접근할 수 없습니다.</li>
+        <li><strong>기기 간 동기화</strong>(프리미엄)는 로그인한 기기들이 같은 데이터를 보도록 당사 서버에 사본을 저장합니다. Google 또는 Apple 로그인이 필요합니다.</li>
+      </ul>
+      <p>두 기능을 쓰지 않으면, 아래 「제3자 서비스」에 적힌 경우를 빼고 데이터가 기기 밖으로 나가지 않습니다.</p>
 
       <h2>수집하지 않는 정보</h2>
       <ul>
-        <li>개인정보(이름, 이메일, 전화번호 등)를 수집하지 않습니다</li>
-        <li>계정 생성을 요구하지 않습니다. Google 로그인은 선택 사항이며 Android의 클라우드 백업에만 사용됩니다</li>
-        <li>위치 정보를 추적하지 않습니다</li>
-        <li>아래 서비스 관련 사항을 제외하고 제3자와 데이터를 공유하지 않습니다</li>
+        <li>cromu를 쓰는 데 계정이 필요하지 않습니다. 기기 간 동기화를 쓰려고 로그인할 때만 계정이 만들어지며, 이때 아래에 적은 대로 이메일 주소를 저장합니다</li>
+        <li>Android 클라우드 백업을 위한 Google 로그인은 이메일 주소를 당사로 보내지 않습니다</li>
+        <li>이름, 전화번호, 정밀 위치 정보를 수집하지 않습니다</li>
+        <li>데이터를 판매하지 않습니다. 이 방침에 적힌 서비스 제공자 외에는 데이터를 공유하지 않습니다</li>
       </ul>
 
       <h2>기기에 저장되는 데이터</h2>
@@ -236,7 +270,7 @@
         <li>앱 설정 (언어, 디스플레이 설정, 닉네임)</li>
         <li>프로필 사진 (설정한 경우)</li>
       </ul>
-      <p>이 데이터는 클라우드 백업을 켜지 않는 한(아래 참고) 기기 밖으로 전송되지 않습니다. 앱을 삭제하면 기기에 있는 데이터는 영구적으로 삭제됩니다. 이미 만든 클라우드 백업은 사용자가 삭제할 때까지 본인의 iCloud 또는 Google Drive 계정에 남아 있습니다.</p>
+      <p>이 데이터는 클라우드 백업이나 기기 간 동기화를 켜지 않는 한(아래 참고) 기기 밖으로 전송되지 않습니다. 앱을 삭제하면 기기에 있는 데이터는 영구적으로 삭제됩니다. 이미 만든 클라우드 백업은 사용자가 삭제할 때까지 본인의 iCloud 또는 Google Drive 계정에 남고, 당사 서버의 데이터는 계정을 삭제할 때까지 남습니다.</p>
 
       <h2>클라우드 백업 (선택)</h2>
       <p>cromu는 데이터를 사용자 본인의 클라우드 저장 공간에 백업할 수 있습니다. 사용자가 사용할 때만 동작하며, 수동 백업은 무료이고 프리미엄 회원은 하루 한 번 자동으로 백업할 수 있습니다.</p>
@@ -248,15 +282,34 @@
       </ul>
       <p>백업을 삭제하거나 중단하려면:</p>
       <ul>
-        <li>앱의 <strong>설정 &gt; 클라우드 백업</strong>에서 끄거나 연결을 해제합니다.</li>
+        <li>앱의 <strong>설정 &gt; 백업 및 복원</strong>에서 끄거나 연결을 해제합니다.</li>
         <li><strong>Android:</strong> Google Drive &gt; 설정 &gt; 앱 관리에서 cromu의 "숨겨진 앱 데이터 삭제"를 선택합니다.</li>
         <li><strong>iOS:</strong> 설정 &gt; [사용자 이름] &gt; iCloud &gt; 계정 저장 공간 관리에서 cromu 데이터를 삭제합니다.</li>
+      </ul>
+
+      <h2>기기 간 동기화 (선택, 프리미엄)</h2>
+      <p>동기화는 사용자가 로그인하고 <strong>설정 &gt; 기기 간 동기화</strong>에서 켜야만 동작합니다. 사용자의 기기들을 같은 상태로 맞추는 데만 쓰입니다.</p>
+      <ul>
+        <li><strong>로그인:</strong> Google 또는 Apple로 로그인합니다. 당사는 Google 또는 Apple로부터 이메일 주소와 계정 식별자를 받으며, 비밀번호는 받지 않습니다. Apple의 「나의 이메일 가리기」를 쓰면 중계 주소만 받습니다.</li>
+        <li><strong>저장하는 정보:</strong> 이메일 주소와 cromu 계정 ID, 프로젝트 데이터(프로젝트, 카운터, 타이머 기록, 도안과 진행 상태, 실, 창고 실, 바늘, 창고 폴더, 실 구매 기록, 기호, 차트), 여기에 붙인 파일(프로젝트 사진, 도안 이미지·PDF, 프로필 사진), 닉네임·프로필 그림·테마 설정, 로그인한 기기마다 만든 임의의 기기 ID, 기기별 푸시 알림 토큰</li>
+        <li><strong>이용 목적:</strong> 사용자의 기기 사이에 변경 내용을 옮기고, 변경이 생기면 다른 기기를 깨우기 위해서입니다. 광고·분석·프로파일링에 쓰지 않으며 판매하지 않습니다.</li>
+        <li><strong>저장 위치:</strong> Cloudflare(Workers, D1 데이터베이스, R2 저장소)에 저장되며, 사용자가 있는 나라가 아닌 곳에서 처리될 수 있습니다. 동기화 알림은 푸시 토큰을 이용해 Google Firebase Cloud Messaging(iOS는 Apple 푸시 알림 서비스 포함)으로 전달되며, 알림에는 내용이 담기지 않습니다.</li>
+        <li><strong>구독:</strong> 로그인한 동안에는 모든 기기에서 프리미엄을 쓸 수 있도록 RevenueCat에서 구독을 cromu 계정 ID에 연결합니다. 이메일 주소는 RevenueCat에 보내지 않습니다.</li>
+        <li><strong>보관 기간:</strong> 계정이 있는 동안 보관합니다. 항목을 바꾸면 이전 내용을 안전용 사본으로 30일 보관하고, 항목을 지우면 다른 기기에서도 지워지도록 삭제 기록을 180일 보관한 뒤 둘 다 자동으로 지웁니다. 기기의 로그인은 180일 동안 쓰지 않으면 만료됩니다.</li>
+      </ul>
+
+      <h2>계정과 데이터 삭제</h2>
+      <ul>
+        <li><strong>앱에서:</strong> 설정 &gt; 기기 간 동기화 &gt; 계정 삭제. 계정과 당사 서버에 있는 모든 데이터(파일 포함)를 즉시 삭제하고, Apple 로그인 연결을 해지하며, RevenueCat의 구독 기록을 삭제합니다. 기기에 있는 데이터는 남습니다.</li>
+        <li><strong>앱이 없다면:</strong> <a href="delete-account.html?lang=ko">cromu 계정 삭제</a> 페이지를 참고하세요.</li>
+        <li><strong>로그아웃</strong>하면 그 기기의 동기화만 멈추고 계정과 서버 데이터는 남습니다.</li>
+        <li>계정을 삭제해도 구독은 해지되지 않습니다. App Store 또는 Google Play 계정 설정에서 해지하세요.</li>
       </ul>
 
       <h2>인앱 구독</h2>
       <p>cromu는 선택형 프리미엄 구독을 제공합니다. 결제는 Apple(App Store) 또는 Google(Google Play)이 처리하며, 당사는 결제 카드 정보를 받지 않습니다. 구독이 유효한지 확인하기 위해 cromu는 <strong>RevenueCat</strong>을 사용하며, RevenueCat은 다음 정보를 처리합니다:</p>
       <ul>
-        <li>RevenueCat이 생성한 익명 앱 사용자 ID (이름·이메일과 연결되지 않음)</li>
+        <li>앱 사용자 ID: RevenueCat이 만든 익명 ID, 또는 기기 간 동기화에 로그인한 경우 cromu 계정 ID (이름·이메일은 포함하지 않음)</li>
         <li>구매 기록 (상품, 구매·만료 일시, 스토어 거래 식별자)</li>
         <li>일반적인 기기 정보 (OS 버전, 앱 버전, 국가/지역, IP 주소)</li>
       </ul>
@@ -266,7 +319,9 @@
       <p>cromu는 다음 권한을 요청할 수 있습니다:</p>
       <ul>
         <li><strong>사진 라이브러리 / 저장소:</strong> 프로젝트 및 패턴용 이미지 선택, 생성된 픽셀아트 디자인을 기기 갤러리에 저장하기 위해 사용됩니다.</li>
+        <li><strong>카메라:</strong> 프로젝트 사진을 찍기 위해 사용됩니다.</li>
         <li><strong>파일:</strong> 기기에서 PDF 또는 텍스트 패턴 파일을 가져오기 위해 사용됩니다.</li>
+        <li><strong>알림:</strong> 실행 중인 타이머와 알림을 보여 주고, 기기 간 동기화를 쓰는 경우 조용한 동기화 알림을 받기 위해 사용됩니다.</li>
       </ul>
       <p>이 권한들은 관련 기능을 사용할 때만 요청되며, 기기 설정에서 언제든지 철회할 수 있습니다.</p>
 
@@ -279,6 +334,7 @@
         <li>광고 상호작용 관련 앱 사용 데이터</li>
       </ul>
       <p>Google의 데이터 수집은 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>의 적용을 받습니다.</p>
+      <p>iOS에서는 광고 식별자를 맞춤 광고에 쓰기 전에 앱 추적 투명성(App Tracking Transparency) 권한을 요청합니다.</p>
       <p>맞춤 광고는 기기 설정에서 해제할 수 있습니다:</p>
       <ul>
         <li><strong>Android:</strong> 설정 &gt; Google &gt; 광고 &gt; 광고 맞춤설정 선택 해제</li>
@@ -321,7 +377,9 @@
       <p>cromu는 13세 미만 아동을 대상으로 하지 않습니다. 아동의 정보를 의도적으로 수집하지 않습니다. 표시되는 광고는 표준 Google AdMob 광고이며 Google 정책의 적용을 받습니다.</p>
 
       <h2>데이터 보안</h2>
-      <p>기기에 저장된 데이터는 기기의 보안 조치(화면 잠금, 암호화 등)에 의해 보호됩니다. 클라우드 백업은 사용자의 Apple 또는 Google 계정 보안으로 보호됩니다. 사용자가 선택한 클라우드 백업과, 위에서 설명한 Google AdMob, Firebase Analytics, Firebase Crashlytics, RevenueCat이 처리하는 데이터를 제외하고 인터넷을 통해 어떠한 데이터도 전송하지 않습니다.</p>
+      <p>기기에 저장된 데이터는 기기의 보안 조치(화면 잠금, 암호화 등)에 의해 보호됩니다. 클라우드 백업은 사용자의 Apple 또는 Google 계정 보안으로 보호됩니다.</p>
+      <p>기기 간 동기화 데이터는 암호화된 연결(HTTPS)로만 전송되며, 해당 계정으로 로그인해야만 접근할 수 있습니다. 파일은 15분 뒤 만료되는 링크로 주고받습니다. 당사 서버의 데이터는 Cloudflare가 저장 시 암호화하며, Apple 로그인 토큰은 별도로 한 번 더 암호화합니다. 다만 동기화된 콘텐츠 자체는 종단간 암호화되지 않습니다.</p>
+      <p>클라우드 백업, 기기 간 동기화, 위에서 설명한 제3자 서비스를 제외하고 cromu는 인터넷으로 데이터를 전송하지 않습니다.</p>
 
       <h2>정책 변경</h2>
       <p>본 개인정보처리방침은 수시로 업데이트될 수 있습니다. 변경 시 시행일이 갱신됩니다. 변경 후 앱을 계속 사용하면 변경 사항에 동의하는 것으로 간주됩니다.</p>
@@ -343,6 +401,7 @@
       document.getElementById('lang-' + lang).classList.add('active');
       document.querySelector('[onclick="switchLang(\'' + lang + '\')"]').classList.add('active');
     }
+    if (new URLSearchParams(location.search).get('lang') === 'ko') switchLang('ko');
   </script>
 </body>
 </html>
